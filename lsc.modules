@@ -154,6 +154,13 @@
 
   <distutils id="ligo-segments">
     <branch module="ligo-segments"/>
+    <dependencies>
+      <dep package="ligo-common"/>
+    </dependencies>
+  </distutils>
+
+  <distutils id="ligo-common">
+    <branch module="ligo-common"/>
   </distutils>
 
   <distutils id="ligo.skymap">
@@ -166,12 +173,16 @@
 
   <distutils id="lvalert">
     <branch repo="git.ligo.org" module="lvalert.git"/>
+    <dependencies>
+      <dep package="ligo-common"/>
+    </dependencies>
   </distutils>
 
   <distutils id="gracedb">
     <branch repo="git.ligo.org" module="gracedb-client.git"/>
     <dependencies>
       <dep package="glue"/>
+      <dep package="ligo-common"/>
     </dependencies>
   </distutils>
 
